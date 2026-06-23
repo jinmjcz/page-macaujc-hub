@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐鱼 · 知识库入口介绍</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; }
+        body { background: #f2f4f6; color: #2c3e50; line-height: 1.6; padding: 2rem 1rem; display: flex; flex-direction: column; align-items: center; }
+        .page-wrap { max-width: 1100px; width: 100%; }
+        .hero { background: white; border-radius: 24px; padding: 2.8rem 2.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02), 0 4px 16px rgba(0,0,0,0.03); margin-bottom: 2.5rem; border: 1px solid #e6eaef; }
+        .hero h1 { font-size: 2.4rem; font-weight: 600; letter-spacing: -0.02em; color: #1a2634; margin-bottom: 0.6rem; }
+        .hero .sub { font-size: 1.1rem; color: #52677a; max-width: 680px; margin-bottom: 1.2rem; border-left: 3px solid #cbd5e1; padding-left: 1rem; }
+        .hero .meta-note { font-size: 0.92rem; color: #6b7f93; background: #f0f3f7; padding: 0.6rem 1.2rem; border-radius: 40px; display: inline-block; margin-top: 0.2rem; border: 1px solid #dee4ec; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; margin-bottom: 2.5rem; }
+        .card { background: white; border-radius: 20px; padding: 1.8rem 1.8rem 2rem; box-shadow: 0 1px 4px rgba(0,0,0,0.02), 0 3px 12px rgba(0,0,0,0.03); border: 1px solid #e7ecf2; transition: box-shadow 0.2s; }
+        .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.03); }
+        .card h2 { font-size: 1.35rem; font-weight: 550; margin-bottom: 0.9rem; color: #1c2a3a; letter-spacing: -0.01em; padding-bottom: 0.5rem; border-bottom: 1px solid #edf1f6; }
+        .card p, .card li { font-size: 0.96rem; color: #3e5468; margin-bottom: 0.5rem; }
+        .card ul { list-style: none; padding-left: 0; }
+        .card ul li::before { content: "— "; color: #9aafc2; }
+        .card .tag { display: inline-block; background: #eef2f8; color: #2f4a63; font-size: 0.8rem; padding: 0.15rem 0.8rem; border-radius: 30px; margin-right: 0.3rem; margin-bottom: 0.3rem; border: 1px solid #dae1eb; }
+        .full-card { grid-column: 1 / -1; background: white; border-radius: 20px; padding: 2rem 2.2rem; border: 1px solid #e7ecf2; box-shadow: 0 1px 4px rgba(0,0,0,0.02), 0 3px 12px rgba(0,0,0,0.03); margin-bottom: 2.5rem; }
+        .full-card h2 { font-size: 1.35rem; font-weight: 550; color: #1c2a3a; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #eef2f7; }
+        .full-card p { color: #3b5369; max-width: 800px; }
+        .link-sentence { background: white; border-radius: 20px; padding: 1.6rem 2rem; border: 1px solid #e7ecf2; box-shadow: 0 1px 4px rgba(0,0,0,0.02), 0 3px 12px rgba(0,0,0,0.03); margin-bottom: 2rem; font-size: 1.05rem; color: #2c4056; }
+        .link-sentence a { color: #1d4f7a; text-decoration: none; font-weight: 500; border-bottom: 1px solid #b7cbdf; padding-bottom: 1px; }
+        .link-sentence a:hover { border-bottom-color: #1d4f7a; }
+        .faq-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; margin-bottom: 2rem; }
+        .faq-item { background: white; border-radius: 18px; padding: 1.4rem 1.6rem; border: 1px solid #e7ecf2; box-shadow: 0 1px 3px rgba(0,0,0,0.01); }
+        .faq-item q { font-weight: 520; color: #1b3144; display: block; margin-bottom: 0.5rem; font-style: normal; font-size: 1rem; }
+        .faq-item p { font-size: 0.92rem; color: #4a5f74; }
+        .footer-note { text-align: center; color: #6f859b; font-size: 0.84rem; border-top: 1px solid #dce3eb; padding-top: 1.8rem; margin-top: 1rem; }
+        @media (max-width: 700px) {
+            .hero { padding: 2rem 1.5rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; gap: 1.4rem; }
+            .faq-mini { grid-template-columns: 1fr; gap: 1.2rem; }
+            .full-card { padding: 1.6rem; }
+            .link-sentence { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <div class="hero">
+        <h1>乐鱼 · 知识库</h1>
+        <div class="sub">汇集网站结构、功能模块与使用说明，快速了解 <a href="https://vip-home-leyu.com" style="color:#1d4f7a; text-decoration: none; font-weight: 500; border-bottom: 1px solid #b7cbdf;">乐鱼</a> 的核心脉络。</div>
+        <div class="meta-note">当前版本 · 信息索引 · 持续整理</div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h2>站点结构</h2>
+            <ul>
+                <li>首页概览 — 主要分类与导航</li>
+                <li>功能专区 — 各模块独立入口</li>
+                <li>内容目录 — 文章/资源索引</li>
+                <li>设置与账户 — 偏好与信息管理</li>
+            </ul>
+            <div style="margin-top: 0.8rem;">
+                <span class="tag">分类</span>
+                <span class="tag">导航</span>
+                <span class="tag">索引</span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>常用说明</h2>
+            <p>页面内的提示、状态标签和帮助文本分布在各个功能区块中，便于用户在操作时随时对照。部分区域提供折叠式说明，减少初次浏览的信息负担。</p>
+            <p style="margin-top: 0.6rem; color: #3d5a76;">—— 建议先浏览结构卡片，再进入具体模块。</p>
+        </div>
+    </div>
+
+    <div class="full-card">
+        <h2>相关信息区</h2>
+        <p>网站提供多个信息分类，覆盖使用指引、常见操作、版本动态以及关联资源。各模块之间通过一致的顶部导航和底部索引连接，用户可以按需跳转。内容以卡片式布局呈现，并配有简短描述和标签，帮助快速识别用途。如果你需要快速判断一个模块是否对应自己的需求，可以首先查看该区域的说明文本和标签分组。</p>
+        <p style="margin-top: 0.8rem; color: #3b5a78;">网站的整体信息结构围绕「清晰分类」和「即查即用」设计，减少多层跳转，核心页面均在一到两次点击内可达。</p>
+    </div>
+
+    <div class="link-sentence">
+        如果你希望直接进入网站内部浏览，可以从 <a href="https://vip-home-leyu.com">乐鱼</a> 的首页开始，各模块入口和说明均在页面中有明确标注。
+    </div>
+
+    <div class="faq-mini">
+        <div class="faq-item">
+            <q>这个页面主要提供什么？</q>
+            <p>以目录和概述的方式展示网站的功能区、内容组织和提示信息，方便新用户快速建立认知，也适合老用户回顾结构。</p>
+        </div>
+        <div class="faq-item">
+            <q>提示区有什么作用？</q>
+            <p>提示区集中放置了操作注意事项、状态说明和简短的上下文提醒，通常出现在卡片底部或模块切换时，帮助减少误操作。</p>
+        </div>
+        <div class="faq-item">
+            <q>相关信息包括哪些内容？</q>
+            <p>包括版本更新摘要、关联模块链接、常见问题索引以及部分外部资源引用。信息均经过筛选，以实用和准确为主。</p>
+        </div>
+        <div class="faq-item">
+            <q>我如何确认某个功能是否适合自己？</q>
+            <p>可以先阅读对应模块的描述和标签，再通过预览或说明片段判断。网站中多数模块都配有简短介绍，无需提前注册即可查看。</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        知识库式介绍 · 基于网站现有结构整理 · 内容仅供参考
+    </div>
+</div>
+</body>
+</html>
