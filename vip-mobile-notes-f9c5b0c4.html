@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乐鱼 · 资料索引手册</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f6f3ef;
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Palatino", "Georgia", "Times New Roman", serif;
+      color: #2d2b28;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .page-wrapper {
+      max-width: 880px;
+      margin: 0 auto;
+      background: #fefcf9;
+      padding: 2.5rem 2.8rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+      color: #3f3a36;
+      border-left: 5px solid #b09d8a;
+      padding-left: 1rem;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #8a7e72;
+      margin-bottom: 2.4rem;
+      font-style: italic;
+      padding-left: 1.5rem;
+      border-bottom: 1px solid #e8e0d6;
+      padding-bottom: 1rem;
+    }
+
+    .intro-block {
+      background: #faf6f0;
+      padding: 1.6rem 2rem;
+      border-radius: 12px;
+      margin-bottom: 2.5rem;
+      border: 1px solid #e5dbd0;
+    }
+
+    .intro-block p {
+      margin-bottom: 0.8rem;
+    }
+
+    .intro-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .directory-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .dir-item {
+      background: #fcf9f5;
+      border-left: 4px solid #cebcab;
+      padding: 1rem 1.4rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      transition: background 0.15s;
+    }
+
+    .dir-item:hover {
+      background: #f7f0e7;
+    }
+
+    .dir-item h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+      color: #4f473f;
+    }
+
+    .dir-item p {
+      font-size: 0.9rem;
+      color: #6f655b;
+      line-height: 1.6;
+    }
+
+    .notice-box {
+      background: #efe9e0;
+      padding: 1.2rem 1.8rem;
+      border-radius: 12px;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      border-left: 6px solid #aa9a88;
+    }
+
+    .notice-box strong {
+      color: #4d4035;
+    }
+
+    .info-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      padding: 1.4rem 0;
+      border-top: 1px solid #ede5db;
+      border-bottom: 1px solid #ede5db;
+    }
+
+    .info-col {
+      flex: 1 1 180px;
+    }
+
+    .info-col h4 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #9b8b7a;
+      margin-bottom: 0.7rem;
+      font-weight: 500;
+    }
+
+    .info-col p {
+      font-size: 0.92rem;
+      color: #4a423b;
+    }
+
+    .faq-mini {
+      margin-bottom: 2rem;
+    }
+
+    .faq-mini details {
+      margin-bottom: 0.8rem;
+      border: 1px solid #e2d7cb;
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+      background: #fbf8f4;
+    }
+
+    .faq-mini summary {
+      font-weight: 500;
+      color: #4d4239;
+      cursor: pointer;
+      padding: 0.25rem 0;
+    }
+
+    .faq-mini details p {
+      font-size: 0.91rem;
+      padding: 0.5rem 0 0.2rem 0;
+      color: #5f554b;
+    }
+
+    .link-sentence {
+      background: #f4ede4;
+      padding: 1.2rem 1.8rem;
+      border-radius: 30px;
+      text-align: center;
+      margin-top: 0.8rem;
+      font-size: 0.98rem;
+    }
+
+    .link-sentence a {
+      color: #6f5b48;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dashed #b7a797;
+      transition: border 0.2s;
+    }
+
+    .link-sentence a:hover {
+      border-bottom: 1px solid #6f5b48;
+    }
+
+    .footnote {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: #b4a697;
+      text-align: right;
+      border-top: 1px solid #ece3d8;
+      padding-top: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .page-wrapper {
+        padding: 1.8rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .directory-grid {
+        grid-template-columns: 1fr;
+      }
+      .info-area {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .intro-block {
+        padding: 1.2rem 1rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      body {
+        padding: 1rem 0.6rem;
+      }
+      .page-wrapper {
+        padding: 1.2rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <h1>乐鱼 · 资料索引</h1>
+    <div class="subtitle">一份关于信息整理与检索的笔记手册</div>
+
+    <div class="intro-block">
+      <p>在信息流动愈来愈快的日常中，我们常常需要一处稳定的资料汇集地。<strong>乐鱼</strong>所承载的，便是这样一种整理与参照的可能。它更像一个不断补全的笔记本，把零散的条目、说明和提示集中在一处，方便回溯与对照。</p>
+      <p>这一页也从资料整理的角度，把常见的结构、提示和关联信息编排成目录式的布局。没有冗余的渲染，只有克制的分类与说明。</p>
+    </div>
+
+    <div class="directory-grid">
+      <div class="dir-item">
+        <h3>· 条目总览</h3>
+        <p>涵盖基础说明、功能摘要、使用场景参考。适合初次接触时快速建立框架。</p>
+      </div>
+      <div class="dir-item">
+        <h3>· 提示与注意</h3>
+        <p>整理了一些容易被忽略的细节和常见疑问，供查阅时对照。</p>
+      </div>
+      <div class="dir-item">
+        <h3>· 关联信息</h3>
+        <p>包含版本备注、参考编号以及交叉引用索引，便于进一步翻阅。</p>
+      </div>
+      <div class="dir-item">
+        <h3>· 检索指引</h3>
+        <p>按关键词、分类标签整理的快捷路径，提升资料查找效率。</p>
+      </div>
+    </div>
+
+    <div class="notice-box">
+      <strong>提示：</strong> 本页所收录条目均来自日常整理，内容力求准确但难免有疏漏。建议结合自身实际使用场景进行比对与验证。资料库会不定期更新。
+    </div>
+
+    <div class="info-area">
+      <div class="info-col">
+        <h4>资料范围</h4>
+        <p>以常见操作说明与功能释义为主，辅以少量背景注释。不包含第三方推广内容。</p>
+      </div>
+      <div class="info-col">
+        <h4>更新周期</h4>
+        <p>每季度做一次内容复核与补充，保持索引的新鲜度与准确性。</p>
+      </div>
+      <div class="info-col">
+        <h4>参考编号</h4>
+        <p>内部编号 N-0223 / 版本标记 v1.2 · 归档时间 2025-04</p>
+      </div>
+    </div>
+
+    <div class="faq-mini">
+      <details>
+        <summary>如何快速找到某个功能的说明？</summary>
+        <p>建议先浏览目录网格，定位对应分类后，再查看具体条目。部分条目末尾附有关联跳转记号。</p>
+      </details>
+      <details>
+        <summary>资料索引会不会频繁变化？</summary>
+        <p>核心条目保持稳定，提示区和关联区会随补充内容微调。每次更新都会在底部注明时间。</p>
+      </details>
+      <details>
+        <summary>是否有更完整的原始资料库？</summary>
+        <p>当前页面为精简索引。更完整的版本可参考 <a href="https://vip-mobile-leyu.com" style="color:#6f5b48;text-decoration:underline;text-underline-offset:2px;">乐鱼</a> 主站内容，那里保留了更详细的说明与历史记录。</p>
+      </details>
+    </div>
+
+    <div class="link-sentence">
+      若想查阅更完整的条目与更新记录，可直接前往 <a href="https://vip-mobile-leyu.com">乐鱼</a> 的资料页面。
+    </div>
+
+    <div class="footnote">
+      · 索引编制 2025 · 仅供内部参考
+    </div>
+  </div>
+</body>
+</html>
